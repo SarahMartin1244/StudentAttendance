@@ -9,10 +9,11 @@ pipeline {
                     deleteDir()
 
                     //  fetch and checkout the code
-                    checkout scm
+                      git 'https://github.com/SarahMartin1244/StudentAttendance.git'
+                   // checkout scm
 
-                    // Building project using Maven
-                    sh 'mvn clean install'
+                    // Full path to Maven executable
+                     sh '/usr/local/bin/mvn clean install'
                 }
             }
         }
