@@ -8,8 +8,7 @@ pipeline {
                     // Clean workspace before fetching
                     deleteDir()
 
-                    //  fetch and checkout the code
-                    checkout scm
+                    git 'https://github.com/SarahMartin1244/StudentAttendance.git'
 
                     // Building project using Maven
                     sh 'mvn clean install'
@@ -29,6 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+
             }
         }
     }
