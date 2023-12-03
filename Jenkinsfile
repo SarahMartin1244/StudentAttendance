@@ -9,8 +9,8 @@ pipeline {
                     deleteDir()
 
                     //  fetch and checkout the code
-                      git 'https://github.com/SarahMartin1244/StudentAttendance.git'
-                   // checkout scm
+                     // git 'https://github.com/SarahMartin1244/StudentAttendance.git'
+                   checkout scm
 
                     // Full path to Maven executable
                      sh '/usr/local/bin/mvn clean install'
