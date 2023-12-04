@@ -8,10 +8,12 @@ pipeline {
                     // Clean workspace before fetching
                     deleteDir()
 
-                    git 'https://github.com/SarahMartin1244/StudentAttendance.git'
+                    //  fetch and checkout the code
+                     // git 'https://github.com/SarahMartin1244/StudentAttendance.git'
+                   checkout scm
 
-                    // Building project using Maven
-                    sh 'mvn clean install'
+                    // Full path to Maven executable
+                     sh '/usr/local/bin/mvn clean install'
                 }
             }
         }
@@ -28,7 +30,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-
             }
         }
     }
