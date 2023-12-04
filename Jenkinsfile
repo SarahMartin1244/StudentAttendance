@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+            // Maven installation name in Jenkins
+            maven 'Maven_setup'
+        }
+
     stages {
         stage('Build') {
             steps {
